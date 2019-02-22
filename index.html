@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <meta name= "viewport" content ="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minesweeper</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <!--<script type="text/javascript" src="scripts/main.js"></script>-->
+  </head>
+  <body>
+    <h1>Lab 3 Website</h1>
+
+    <script>
+      //Scripted in the HTML given this is the only accesory function in JS
+      function toggle_btn(id) {
+        var div = document.getElementById(id);
+
+        if(div.style.display == 'none'){
+         div.style.display = 'block';
+        }
+        else{
+          div.style.display = 'none';
+        }
+      }
+
+      function validate(){
+    var pass1 = document.getElementById("password1").value
+    var pass2 = document.getElementById("password2").value
+    
+    console.log(pass2)
+    if (pass1 == pass2){
+        alert("GOOD")
+        
+        return false
+    }
+    else{
+        alert("BAD")
+        return true
+    }
+}
+    </script>
+
+      <button onclick="toggle_btn('rules')">Rules</button>
+      <div style="display: none;"id = "rules">
+        <p>You need to write a password</p>
+      </div>
+      <button onclick="toggle_btn('controls')">Controls</button>
+      <div style="display: none;"id = "controls">
+        <p>Then you need to do it again and not fuck it up</p>
+      </div>
+
+
+      
+
+        <p id="one" >Password:</p>
+        <input type="text" class="border-gradient" id="password1">
+        <p id="two"> Verify Passwword:</p>
+        <input type="text" class="border-gradient" id="password2">
+
+        <button onclick="validate()">Validate</button>
+    
+
+    <!--<form onsubmit = "return validate()">
+
+        <p>Password:</p>
+        <input class="border-gradient" id="password1" value="Password">
+        <p>Verify Passwword:</p>
+        <input class="border-gradient" id="password2" value="Verify">
+
+        <button type="submit">Validate</button>
+    </form>-->
+
+
+    <!--End call to JS Scripts-->
+    <!--<script src="scripts/main.js"></script>-->
+
+  </body>
+</html>
