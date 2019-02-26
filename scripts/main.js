@@ -93,3 +93,10 @@ function next() {
     imgs[index].style.display = "block"
     
 }
+
+function red() {
+    let mani = document.getElementsById("mani")
+
+    mani.style.fontSize = "60px";
+    //mani.style.backgroundColor = "rgb(0, 90, 65)"
+}
