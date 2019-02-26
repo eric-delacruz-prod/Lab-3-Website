@@ -4,77 +4,83 @@
     <meta charset = "UTF-8">
     <meta name= "viewport" content ="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Minesweeper</title>
+    <title>Lab 3</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <!--<script type="text/javascript" src="scripts/main.js"></script>-->
+    <script type="text/javascript" src="scripts/main.js"></script>
   </head>
   <body>
-    <h1>Lab 3 Website</h1>
 
-    <script>
-      //Scripted in the HTML given this is the only accesory function in JS
-      function toggle_btn(id) {
-        var div = document.getElementById(id);
+    <h1></h1>
 
-        if(div.style.display == 'none'){
-         div.style.display = 'block';
-        }
-        else{
-          div.style.display = 'none';
-        }
-      }
+    <!--Value Inputs-->
+    <p id="one" >Password:</p>
+    <input type="text" class="border-gradient" id="password1">
+    <p id="two"> Verify Passwword:</p>
+    <input type="text" class="border-gradient" id="password2">
 
-      function validate(){
-    var pass1 = document.getElementById("password1").value
-    var pass2 = document.getElementById("password2").value
-    
-    console.log(pass2)
-    if (pass1 == pass2){
-        alert("GOOD")
-        
-        return false
-    }
-    else{
-        alert("BAD")
-        return true
-    }
-}
-    </script>
+    <!--Control Inputs-->
+    <button id="login" onclick="login()">Login</button>
+    <!--<button id="logout" style="display: none;" onclick="logout()">Logout</button>-->
 
-      <button onclick="toggle_btn('rules')">Rules</button>
-      <div style="display: none;"id = "rules">
-        <p>You need to write a password</p>
-      </div>
-      <button onclick="toggle_btn('controls')">Controls</button>
-      <div style="display: none;"id = "controls">
-        <p>Then you need to do it again and not fuck it up</p>
-      </div>
-
-
+    <!--Profile-->
+    <div id = "profile" style = "display: none;">
+      <img id = "profpic" src=images/0.jpg>
+      <p> 
+        Imagine yourself at five or six years old, or whenever it was that you started to develop actual, 
+        lasting interests; you wander into the garage, as one does, and day after day you’re met with a 
+        yellow De Tomaso Pantera. At first you think it’s the norm, but as the years go by you realize just how 
+        special that car is. The Pantera made a lasting impression on Garrett.
+      </p>
+      <p>
+        His love for old school American iron was solidified when he restored a Camaro with his father in his teens, 
+        so when Garrett wanted to build a car for road courses and autocross he looked to vintage muscle. 
+        Like all of us, Garrett knows that modern cars are ‘better’ and that it would be cheaper to build a 
+        track-ready car from a more recent decade. But it just wouldn’t be the same, would it?
+      </p>
+      <iframe  width="720" height="480"
+      src="https://www.youtube.com/embed/leGA2w8PUnw">
+      </iframe>
+  </div>
       
+    <!--Slide Show-->
+    <div id = "slideshow" style="display: none;">
+    <section>
+      <img class="slides" id="vette" style="display: block;" src="images/1.jpg">
+      <img class="slides" id="vette" src="images/2.jpg">
+      <img class="slides" id="vette" src="images/4.jpg">
+      <img class="slides" id="vette" src="images/5.jpg">
+      <img class="slides" id="vette" src="images/6.jpg">
+      <img class="slides" id="vette" src="images/7.jpg">
+      <img class="slides" id="vette" src="images/8.jpg">
+      <img class="slides" id="vette" src="images/9.jpg">
+      <img class="slides" id="vette" src="images/10.jpg">
+      <img class="slides" id="vette" src="images/11.jpg">
+      <img class="slides" id="vette" src="images/12.jpg">
+      <img class="slides" id="vette" src="images/13.jpg">
+      <img class="slides" id="vette" src="images/14.jpg">
+      <img class="slides" id="vette" src="images/15.jpg">
+      <img class="slides" id="vette" src="images/16.jpg">
+      <img class="slides" id="vette" src="images/17.jpg">
+      <img class="slides" id="vette" src="images/18.jpg">
+      <img class="slides" id="vette" src="images/19.jpg">
+      <img class="slides" id="vette" src="images/20.jpg">
+      <img class="slides" id="vette" src="images/21.jpg">
+      <img class="slides" id="vette" src="images/22.jpg">
+      <img class="slides" id="vette" src="images/23.jpg">
+      <img class="slides" id="vette" src="images/24.jpg">
+      <img class="slides" id="vette" src="images/25.jpg">
+      <img class="slides" id="vette" src="images/26.jpg">
+      <img class="slides" id="vette" src="images/27.jpg">
+    </section>
 
-        <p id="one" >Password:</p>
-        <input type="text" class="border-gradient" id="password1">
-        <p id="two"> Verify Passwword:</p>
-        <input type="text" class="border-gradient" id="password2">
+    <!--Slide Show Controls-->
+    <div id="controls">
+      <button id="imagecontrol" onclick="prev()">Prev</button>
+      <button id="imagecontrol" onclick="next()">Next</button>
+    </div>
+  </div>
 
-        <button onclick="validate()">Validate</button>
-    
-
-    <!--<form onsubmit = "return validate()">
-
-        <p>Password:</p>
-        <input class="border-gradient" id="password1" value="Password">
-        <p>Verify Passwword:</p>
-        <input class="border-gradient" id="password2" value="Verify">
-
-        <button type="submit">Validate</button>
-    </form>-->
-
-
-    <!--End call to JS Scripts-->
-    <!--<script src="scripts/main.js"></script>-->
-
+     
   </body>
 </html>

@@ -1,55 +1,35 @@
-html {
-    font-size: 10px;
-    font-family: "Open Sans", Gadget, sans-serif;
-    background-color: rgb(50, 50, 70);
-  }
-  
-  
-  h1 {
-    font-size: 60px;
-    text-align: center;
-    padding: 0px;
-    color: rgb(255, 186, 226);  
-  }
-  
-  p {
-    text-align: center;
-    font-size: 16px;
-    line-height: 2;
-    letter-spacing: 1px;
-    color: rgb(255, 255, 255);  
-  }
+html {font-size: 10px;font-family: "Open Sans", Gadget, sans-serif;background-color: rgb(38, 51, 39);}
 
-  .border-gradient {
-    border-image-slice: 1;
-    border-width: 2px;
-  }
- 
+h1 {font-size: 60px;text-align: center;padding: 0px;color: rgb(0, 0, 0);  }
 
-  input {
-    -webkit-appearance: value;
-    display: block;
-    margin: 10px auto;
-    background-color: transparent;
-    color: rgb(255, 186, 226);
-    border-radius: 5px;
-    border-width: 5px;
-    border-image: linear-gradient(35deg, rgb(107, 220, 254) 40%, rgb(255, 186, 226) 90%);
-  }
+p {text-align: center;font-size: 16px;line-height: 2;letter-spacing: 1px;color: rgb(255, 255, 255);  }
 
-  #board {
-    display: block;
-    padding: 10px;
-  }
+.border-gradient {border-image-slice: 1;border-width: 2px;}
 
-  button {
-    display: block;
-    background: linear-gradient(35deg, rgb(107, 220, 254) 40%, rgb(255, 186, 226) 90%);
-    color: rgb(255, 255, 255);
-    border-radius: 4px;
-    padding: 20px;
-    text-align: center;
-    font-size: 16px;
-    margin: 20px auto;
-  }
-  
+input {display: block;margin: 10px auto;background-color: transparent;color: rgb(0, 0, 0);
+  border-radius: 5px;border-width: 5px;border-image: linear-gradient(35deg, rgb(52, 90, 65) 20%,
+  rgb(73, 73, 73) 90%);}
+
+button {display: block;background: linear-gradient(35deg, rgb(52, 90, 65) 40%, rgb(73, 73, 73) 90%);
+  color: rgb(0, 0, 0);border-radius: 4px;padding: 20px;text-align: center;font-size: 16px;
+    margin: 20px auto;}
+
+#vette {  display: none; margin: auto; height: 400px; width: 600px; overflow: hidden; }
+
+#imagecontrol { margin: 10px; padding: 15px; display: inline-block;}
+
+#controls { padding: 20px; text-align: center; }
+
+#profpic { filter: sepia(20%); height: 720px; width: 1080px; overflow: hidden; }
+
+#profile { text-align: center;}
+
+#slideshow { padding: 20px; }
+
+/*.w3-bar{width:100%;overflow:hidden}.w3-center .w3-bar{display:inline-block;width:auto}
+.w3-bar .w3-bar-item{padding:8px 16px;float:left;background-color:inherit;color:inherit;width:auto;border:none;outline:none;display:block}
+.w3-bar .w3-dropdown-hover,.w3-bar .w3-dropdown-click{position:static;float:left}
+.w3-bar .w3-button{background-color:inherit;color:inherit;white-space:normal}
+.w3-bar-block .w3-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;background-color:inherit;color:inherit;border:none;outline:none;white-space:normal;float:none}
+.w3-bar-block.w3-center .w3-bar-item{text-align:center}
+.w3-black {color:#fff!important;background:linear-gradient(35deg, rgb(107, 220, 254) 10%, rgb(255, 186, 226) 90%)!important}
