@@ -20,6 +20,7 @@ function login(){
     //let logout = document.getElementById("logout")
     let slideshow = document.getElementById("slideshow")
     let profile = document.getElementById("profile")
+    let csscontrol = document.getElementById("csscontrol")
     
         if ((pass_1 == pass_2) && (pass_1 != "") && (pass_2 != "")){
             
@@ -31,6 +32,7 @@ function login(){
             //logout.style.display = 'block'
             slideshow.style.display = 'block'
             profile.style.display = 'block'
+            csscontrol.style.display = 'block'
             return false
         }
         else{
@@ -80,7 +82,7 @@ function next() {
 
 }
 
-  function prev() {
+function prev() {
     let imgs = document.getElementsByClassName("slides")
     
     imgs[index].style.display = "none"
@@ -94,9 +96,93 @@ function next() {
     
 }
 
-function red() {
-    let mani = document.getElementsById("mani")
+function userGame() {
+    let profile = document.getElementById("profile")
+    let slideshow = document.getElementById("slideshow")
+    let controls = document.getElementById("controls")
+    let btn = document.getElementById("csscontrol")
+    let thegame = document.getElementById("gamecontrol")
 
-    mani.style.fontSize = "60px";
-    //mani.style.backgroundColor = "rgb(0, 90, 65)"
+    
+        profile.style.display = "none"
+        slideshow.style.display = "none"
+        controls.style.display = "none"
+        thegame.style.display = "block"
+        btn.style.display = "none"
+        
+
+}
+
+function profileReturn() {
+    let profile = document.getElementById("profile")
+    let slideshow = document.getElementById("slideshow")
+    let controls = document.getElementById("controls")
+    let btn = document.getElementById("csscontrol")
+    let thegame = document.getElementById("gamecontrol")
+
+    
+        profile.style.display = "block"
+        slideshow.style.display = "block"
+        controls.style.display = "block"
+        btn.style.display = "block"
+        thegame.style.display = "none"
+
+}
+
+function change() {
+    let bgc = document.getElementById("mani1").value
+    let bdc = document.getElementById("mani2").value
+    let bdw = document.getElementById("mani3").value
+    let target = document.getElementById("manipulatee")
+
+
+    if (bgc == "Blue") {
+        target.style.background = "Blue"
+    }
+    else if (bgc == "Green") {
+        target.style.background = "Green"
+    }
+    else if (bgc == "Red") {
+        target.style.background = "Red"
+    }
+    else {
+        target.style.background = "None"
+    }
+
+    /////////////////////////////////////////
+
+    if (bdc == "Blue") {
+        target.style.borderStyle = "solid";
+        target.style.borderColor = "Blue"
+    }
+    else if (bdc == "Green") {
+        target.style.borderStyle = "solid";
+        target.style.borderColor = "Green"
+    }
+    else if (bdc == "Red") {
+        target.style.borderStyle = "solid";
+        target.style.borderColor = "Red"
+    }
+    else {
+        target.style.borderStyle = "none";
+    }
+
+    /////////////////////////////////////////
+
+    if (bdw == "Thick") {
+        target.style.borderStyle = "solid";
+        target.style.borderWidth = "Thick"
+    }
+    else if (bdw == "Medium") {
+        target.style.borderStyle = "solid";
+        target.style.borderWidth = "Medium"
+    }
+    else if (bdw == "Thin") {
+        target.style.borderStyle = "solid";
+        target.style.borderWidth = "Thin"
+    }
+    else {
+        target.style.borderStyle = "none";
+    }
+
 }
