@@ -21,9 +21,8 @@ function login(){
     let slideshow = document.getElementById("slideshow")
     let profile = document.getElementById("profile")
     let csscontrol = document.getElementById("csscontrol")
-    console.log(pass_1.length)
     
-        if ((pass_1 == pass_2) && (pass_1 != "") && (pass_2 != "") && (pass_1.length == 8)){
+        if ((pass_1 == pass_2) && (pass_1 != "") && (pass_2 != "") && (pass_1.length >= 8)){
             
             input_1.style.display = 'none'
             input_2.style.display = 'none'
